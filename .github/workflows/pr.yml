@@ -1,5 +1,7 @@
 name: Quality Assurance
-on: [pull_request,build_app]
+on:
+  push:
+    branches: ['*']
 
 jobs:
   quality-assurance:
