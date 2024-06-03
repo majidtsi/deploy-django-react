@@ -23,7 +23,7 @@ jobs:
         with:
           path: "backend/requirements.txt"
 
-      - name: fonction docker
-        run: |
-          docker-compose up --build
-          exit 0
+      - name: Lint
+        run: make lint
+      - name: Test
+        run: make test
