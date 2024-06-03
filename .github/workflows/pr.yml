@@ -2,7 +2,7 @@ name: exemple fonction
 on:
   push:
     branches:
-      - build_app
+      - main
 
 jobs:
   exemple-fonction:
