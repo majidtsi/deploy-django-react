@@ -1,28 +1,13 @@
-name: exemple fonction
-on:
-  push:
-    branches:
-      - main
+on: push
 
+name: Integration
 jobs:
-  exemple-fonction:
-    name: exemple fonction
-    runs-on: ubuntu-latest
-    container: python:3.10
-
+  build:
+    runs-on: ubuntu-20.04
     steps:
-      - name: Checkout code
-        use: actions/checkout@v2
-
-      - name: Setup Python 3.10.8
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - name: Install Python dependencies
-        uses: py-actions/py-dependency-install@v4
-        with:
-          path: "backend/requirements.txt"
-
-      - name: fonction docker
-        run: docker-compose up --build
-
+      - run: python my_script.py
+          
