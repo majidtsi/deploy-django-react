@@ -1,22 +1,22 @@
-name: Quality Assurance
+name: exemple fonction
 on:
   push:
     branches: ['*']
 
 jobs:
-  quality-assurance:
-    name: Quality Assurance
+  exemple-fonction:
+    name: exemple fonction
     runs-on: ubuntu-latest
-    container: python:3.10.4-buster
+    container: python:3.10
 
     steps:
       - name: Checkout code
-        use: actions/checkout@v3
+        use: actions/checkout@v2
 
       - name: Setup Python 3.10.8
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10.8'
+          python-version: '3.10'
       - name: Install Python dependencies
         uses: py-actions/py-dependency-install@v4
         with:
