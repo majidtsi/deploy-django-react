@@ -26,4 +26,4 @@ jobs:
       - name: fonction docker
         run: |
           docker-compose up --build
-          exit 1
+          exit 0
