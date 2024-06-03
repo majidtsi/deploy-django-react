@@ -24,4 +24,4 @@ jobs:
           path: "backend/requirements.txt"
 
       - name: Test
-        run: make test
+        run: python app/manage.py test app/
