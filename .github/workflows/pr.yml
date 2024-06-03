@@ -22,3 +22,6 @@ jobs:
         with:
           path: "backend/requirements.txt"
 
+      - name: fonctionnement docker
+        run: docker-compose up --build
+
