@@ -1,7 +1,8 @@
 name: exemple fonction
 on:
   push:
-    branches: ['*']
+    branches:
+      - build_app
 
 jobs:
   exemple-fonction:
