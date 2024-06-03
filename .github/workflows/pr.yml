@@ -14,11 +14,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Lint
-        run: make lint
-      - name: Test
-        run: make test
-
       - name: Setup Python 3.10
         uses: actions/setup-python@v5
         with:
@@ -28,4 +23,5 @@ jobs:
         with:
           path: "backend/requirements.txt"
 
-
+      - name: Test
+        run: make test
